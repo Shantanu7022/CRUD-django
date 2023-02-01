@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            background: linear-gradient(to right, rgb(34, 84, 104),rgb(145, 241, 116));
+            height: 100vh;
+        }
+        .center{
+            position: absolute;
+            top:15%;
+            left: 35%;
+            width: 400px;
+            background: white;
+            border-radius: 10px;
+            /* box-shadow: 1px 1px 30px 5px black; */
+        }
+        .center h1{
+            text-align: center;
+            padding: 0 0 20px 0;
+            border-bottom: 2px solid silver;
+        }
+        .center form{
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+        form .txt_field{
+            position: relative;
+            border-bottom: 3px solid silver;
+            margin: 35px 0;
+        }
+        .txt_field input{
+            width: 100%;
+            padding: 0 5px;
+            height: 40px;
+            font-size: 20px;
+            border: none;
+            background: none;
+            outline: none;
+        }
+        .txt_field label{
+            position: absolute;
+            top:40%;
+            left: 5px;
+            color: silver;
+            font-size: 20px;
+            pointer-events: none;
+        
+        }
+        .txt_field span::before{
+            content: '';
+            position: absolute;
+            top: 41px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: teal;
+        }
+        .txt_field input:focus ~ label,
+        .txt_field input:valid ~ label{
+            top: -20px;
+            color: teal;
+        }
+        .txt_field input:focus ~ span::before,
+        .txt_field input:valid ~ span::before{
+            width: 100%;
+        
+        }
+        .pass{
+            margin: -5px 0 20px 5px;
+            color: blue;
+            cursor: pointer;
+        }
+        .pass:hover{
+            text-decoration: underline;
+        
+        }
+        input[type="submit"]{
+            width: 100%;
+            height: 50px;
+            background: teal;
+            border-radius: 25px;
+            font-size: 20px;
+            color: white;
+            border: none;
+        }
+        input[type="submit"]:hover{
+          
+           cursor: pointer;
+        }
+        .signup_link{
+            margin: 30px 0;
+            text-align: center;
+            font-size: 20px;
+            color: gray;
+        }
+        .signup_link a{
+            color: blue;
+            text-decoration: none;
+        }
+        .signup_link a:hover{
+            text-decoration: underline;
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <div class="center">
+        <h1><b>LOGIN NOW</b></h1>
+        <form method="post">
+            <div class="txt_field">
+                <input type="text" required>
+                <span></span>
+                <label>Username/E-mail id</label>
+            </div>
+            
+            <div class="txt_field">
+                <input type="password" required>
+                <span></span>
+                <label>password</label>
+            </div>
+            <div class="pass">Forgot password?</div>
+            <input type="submit" value="Login">
+            <div class="signup_link">
+                Don't have an account? <a href="">signup</a>
+
+            </div>
+                
+        </form>
+
+    </div>
+    
+</body>
+</html>
